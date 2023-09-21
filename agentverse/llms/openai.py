@@ -20,8 +20,10 @@ except ImportError:
     is_openai_available = False
     logging.warning("openai package is not installed")
 else:
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
-    openai.proxy = os.environ.get("http_proxy")
+    # openai.api_key = os.environ.get("OPENAI_API_KEY")
+    # openai.proxy = os.environ.get("http_proxy")
+    openai.api_key = "sk-acvUfROaV5jbQ36Q5499DdBfDe7b4c00Bd5a2a0bEa8bAb0c"
+    openai.api_base = "https://openai.proxy.zhizhi.tech/v1" 
     if openai.proxy is None:
         openai.proxy = os.environ.get("HTTP_PROXY")
     if openai.api_key is None:
